@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+    /* border: 2px solid orange; */
+    font-family: "Russo One", sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    
+}
+body{
+    padding-block: 5rem ;
+    overflow-y: scroll;
+    background-color: rgb(237, 233, 250);
+
+  
+  
+}
+.wrapper{
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 80%;
+    /* border: 1px solid; */
+}
+.alert{
+    width: 80%;
+    max-width: 350px;
+    height: 50%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.1rem;
+    border-left: 6px solid rgba(39, 39, 38, 0.879);
+    border-bottom: 6px solid rgba(39, 39, 38, 0.879);
+    padding-block: 1rem;
+    border-radius: 9px;
+    background-image: linear-gradient(to top right, rgba(0, 128, 0, 0.395), rgba(65, 116, 37, 0.548)), url('./images/bg-pattern-desktop.svg');
+    /* background-image: ; */
+    background-repeat: repeat-x;
+    background-size: 400px;
+    box-shadow: 25px 25px 10px rgba(0, 0, 0, 0.167);
+}
+.img-box{
+    position: relative;
+    /* padding: 5px; */
+    /* overflow: hidden; */
+    width: 20%;
+    background-color: rgb(101, 160, 101);
+    border-radius: 50%;
+    border: 1px solid;
+    border-top: 6px solid black;
+    border-right: 6px solid black;
+    left: 50%;
+    top: -30px;
+    /* transform: translate(-50%); */
+    animation: bounce 3s infinite linear alternate;
+
+}
+
+.img-box::before{
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    width: 100%;
+    padding: 5px;
+    height: 25%;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50%;
+    animation: bounce2 3s infinite linear alternate;
+
+}
+
+
+.success-img{
+    width: 100%;
+    height: 100%;
+}
+.success-text{
+    margin-top: 6%;
+    color: white;
+    letter-spacing: 2px;
+}
+.title{
+    color: aliceblue;
+    letter-spacing: 5px;
+    
+    font-family:  "Russo One", sans-serif;
+}
+.title::first-letter{
+    color: rgb(134, 183, 203);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.827);
+}
+.btn{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 8%;
+    width: 60%;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+overflow: hidden;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.458);
+
+}
+
+.btn a{
+    position: absolute;
+    text-decoration: none;
+    color: rgba(0, 128, 0, 0.655);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.btn a:hover{
+    letter-spacing: 3px;
+
+}
+
+.btn a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    left: 0;
+    /* background-color: rgba(177, 220, 133, 0.773); */
+    background-image: url("./girl-happy-face-cartoon-cute-png-2452643046.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+    transition: all 1s ease-in-out;
+    transition-delay: 0.3s;
+    border-radius: 25px;
+}
+
+.btn a:hover::before{
+    width: 100%;
+    animation: my-pos 2s infinite linear alternate;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.611);
+}
+@keyframes bounce {
+    
+    from{transform: translate(-50%, 0%);}
+    to{transform: translate(-50%, 20%);}
+}
+
+@keyframes bounce2 {
+    from{transform: translateY(0%) scale(0.3);}
+    to{transform: translateY(20%) scale(1);}
+}
+.alert.error{
+    background-image: linear-gradient(to top right, #dc143cb4, #ffa60083), url('./bg-pattern-desktop.svg'); 
+    background-position: center;
+
+}
+
+.btn.error a{
+    color: crimson;
+}
+
+.alert.error .img-box{
+    background-color: rgba(220, 20, 60, 0.805);
+}
+
+.btn.error a::before{
+    /* background-color: #d4493ae0; */
+    background-image: url("./girl-sad-face-cartoon-cute-png-3039837201.png");
+}
+
+.sym{
+    
+    border: 6px solid white;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+    background-color: #d44a3a;
+    left: -10%;
+    color: white;
+    overflow: hidden;
+    /* box-shadow: -10px -10px 3px rgb(12, 12, 12); */
+    animation: shad 3s infinite linear alternate;
+    
+}
+
+.sym.success{
+    
+    background-color: rgb(101, 176, 101);
+}
+
+@keyframes my-rot {
+    from{transform:  rotate(0deg);}
+    to{transform:  rotate(360deg);}
+}
+
+
+@media (min-width: 900px) {
+    .wrapper{
+        flex-direction: row;
+    }
+    
+}
+@keyframes shad {
+    from{    box-shadow: -10px -10px 3px rgba(12, 12, 12, 0.651);
+    }
+    to{    box-shadow: 15px 15px 3px rgba(12, 12, 12, 0.486);
+    }
+}
+.main-heading{
+    text-align: center;
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.644);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.425);
+}
+
+@keyframes my-pos {
+    from{background-position: left;}
+    to{background-position: right;}
+    
+}
+
+.half{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(14, 14, 14, 0.101);
+  bottom: 0;
+    box-shadow: 0 0 3px 3px rgba(42, 41, 41, 0.619);
+    border-radius: 20px;
+    animation: my-rot 3s infinite linear;
+   
+}
