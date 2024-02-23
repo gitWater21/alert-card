@@ -43,7 +43,7 @@ body{
     border-bottom: 6px solid rgba(39, 39, 38, 0.879);
     padding-block: 1rem;
     border-radius: 9px;
-    background-image: linear-gradient(to top right, rgba(0, 128, 0, 0.395), rgba(65, 116, 37, 0.548)), url('./images/bg-pattern-desktop.svg');
+    background-image: linear-gradient(to top right, rgba(0, 128, 0, 0.395), rgba(65, 116, 37, 0.548)), url('./bg-pattern-desktop.svg');
     /* background-image: ; */
     background-repeat: repeat-x;
     background-size: 400px;
